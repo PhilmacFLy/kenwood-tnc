@@ -1,0 +1,295 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:DB9_Female J1
+U 1 1 5EB8A165
+P 2100 2800
+F 0 "J1" H 2018 2108 50  0000 C CNN
+F 1 "DB9_Female" H 2018 2199 50  0000 C CNN
+F 2 "Connector_Dsub:DSUB-9_Female_Horizontal_P2.77x2.84mm_EdgePinOffset4.94mm_Housed_MountingHolesOffset7.48mm" H 2100 2800 50  0001 C CNN
+F 3 " ~" H 2100 2800 50  0001 C CNN
+	1    2100 2800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_POT RV2
+U 1 1 5EB8C4FA
+P 3800 3950
+F 0 "RV2" H 3731 3996 50  0000 R CNN
+F 1 "R_POT" H 3731 3905 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Vishay_T73XW_Horizontal" H 3800 3950 50  0001 C CNN
+F 3 "~" H 3800 3950 50  0001 C CNN
+	1    3800 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 3750 3800 3800
+Wire Wire Line
+	3950 3950 4800 3950
+$Comp
+L Device:CP C1
+U 1 1 5EB8FBCF
+P 4350 1600
+F 0 "C1" V 4095 1600 50  0000 C CNN
+F 1 "CP" V 4186 1600 50  0000 C CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 4388 1450 50  0001 C CNN
+F 3 "~" H 4350 1600 50  0001 C CNN
+	1    4350 1600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5EB984AB
+P 2750 2900
+F 0 "R1" V 2543 2900 50  0000 C CNN
+F 1 "R" V 2634 2900 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 2680 2900 50  0001 C CNN
+F 3 "~" H 2750 2900 50  0001 C CNN
+	1    2750 2900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2400 2900 2600 2900
+Wire Wire Line
+	2900 2900 3050 2900
+Wire Wire Line
+	3450 2700 3450 2550
+Wire Wire Line
+	3450 3100 4000 3100
+Wire Wire Line
+	4000 2800 4000 2550
+Wire Wire Line
+	4000 2550 3450 2550
+Wire Wire Line
+	2400 2400 2550 2400
+Wire Wire Line
+	3050 2950 3050 2900
+Connection ~ 3050 2900
+Wire Wire Line
+	3050 2900 3150 2900
+Wire Wire Line
+	3800 4100 3800 4250
+$Comp
+L Diode:1N4148 D2
+U 1 1 5EBD3200
+P 4000 2950
+F 0 "D2" V 3954 3029 50  0000 L CNN
+F 1 "1N4148" V 4045 3029 50  0000 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4000 2775 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4000 2950 50  0001 C CNN
+	1    4000 2950
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148 D1
+U 1 1 5EBD4C4F
+P 3050 3100
+F 0 "D1" V 3004 3179 50  0000 L CNN
+F 1 "1N4148" V 3095 3179 50  0000 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3050 2925 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3050 3100 50  0001 C CNN
+	1    3050 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:2N2219 Q1
+U 1 1 5EBE61DC
+P 3350 2900
+F 0 "Q1" H 3540 2946 50  0000 L CNN
+F 1 "BC547C" H 3540 2855 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92" H 3550 2825 50  0001 L CIN
+F 3 "http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF" H 3350 2900 50  0001 L CNN
+	1    3350 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 3250 3450 3250
+Wire Wire Line
+	3450 3250 3450 3100
+Connection ~ 3450 3100
+Wire Wire Line
+	3450 3250 3650 3250
+Wire Wire Line
+	3650 3250 3650 3400
+Connection ~ 3450 3250
+$Comp
+L power:GND #PWR05
+U 1 1 5EBE9B86
+P 3650 3400
+F 0 "#PWR05" H 3650 3150 50  0001 C CNN
+F 1 "GND" H 3655 3227 50  0000 C CNN
+F 2 "" H 3650 3400 50  0001 C CNN
+F 3 "" H 3650 3400 50  0001 C CNN
+	1    3650 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5EBEA63D
+P 3350 1500
+F 0 "#PWR04" H 3350 1250 50  0001 C CNN
+F 1 "GND" H 3355 1327 50  0000 C CNN
+F 2 "" H 3350 1500 50  0001 C CNN
+F 3 "" H 3350 1500 50  0001 C CNN
+	1    3350 1500
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5EBEAD4A
+P 2550 2400
+F 0 "#PWR01" H 2550 2150 50  0001 C CNN
+F 1 "GND" H 2555 2227 50  0000 C CNN
+F 2 "" H 2550 2400 50  0001 C CNN
+F 3 "" H 2550 2400 50  0001 C CNN
+	1    2550 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 5EBEB3AF
+P 3800 4250
+F 0 "#PWR06" H 3800 4000 50  0001 C CNN
+F 1 "GND" H 3805 4077 50  0000 C CNN
+F 2 "" H 3800 4250 50  0001 C CNN
+F 3 "" H 3800 4250 50  0001 C CNN
+	1    3800 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT RV1
+U 1 1 5EBD4DB1
+P 3200 1850
+F 0 "RV1" H 3131 1896 50  0000 R CNN
+F 1 "R_POT" H 3131 1805 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Vishay_T73XW_Horizontal" H 3200 1850 50  0001 C CNN
+F 3 "~" H 3200 1850 50  0001 C CNN
+	1    3200 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 1600 3350 1600
+Wire Wire Line
+	3350 1600 3350 1850
+$Comp
+L power:GND #PWR03
+U 1 1 5EBD83F6
+P 3200 2000
+F 0 "#PWR03" H 3200 1750 50  0001 C CNN
+F 1 "GND" H 3205 1827 50  0000 C CNN
+F 2 "" H 3200 2000 50  0001 C CNN
+F 3 "" H 3200 2000 50  0001 C CNN
+	1    3200 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L FC68131:FC68131 J3
+U 1 1 5EBF33F7
+P 2600 1500
+F 0 "J3" H 2644 1681 50  0000 C CNN
+F 1 "PC MIC" H 2644 1590 50  0000 C CNN
+F 2 "CLIFF_FC68131" H 2600 1500 50  0001 L BNN
+F 3 "Manufacturer Recommendations" H 2600 1500 50  0001 L BNN
+F 4 "Cliff" H 2600 1500 50  0001 L BNN "Feld4"
+F 5 "6.00 mm" H 2600 1500 50  0001 L BNN "Feld5"
+F 6 "5" H 2600 1500 50  0001 L BNN "Feld6"
+	1    2600 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L FC68131:FC68131 J4
+U 1 1 5EBF47A9
+P 5800 1600
+F 0 "J4" H 5545 1436 50  0000 R CNN
+F 1 "Radio MIC" H 5545 1527 50  0000 R CNN
+F 2 "CLIFF_FC68131" H 5800 1600 50  0001 L BNN
+F 3 "Manufacturer Recommendations" H 5800 1600 50  0001 L BNN
+F 4 "Cliff" H 5800 1600 50  0001 L BNN "Feld4"
+F 5 "6.00 mm" H 5800 1600 50  0001 L BNN "Feld5"
+F 6 "5" H 5800 1600 50  0001 L BNN "Feld6"
+	1    5800 1600
+	-1   0    0    1   
+$EndComp
+$Comp
+L FC68131:FC68131 J5
+U 1 1 5EBF5C29
+P 5800 2000
+F 0 "J5" H 5545 1836 50  0000 R CNN
+F 1 "Radio Speaker" H 5545 1927 50  0000 R CNN
+F 2 "CLIFF_FC68131" H 5800 2000 50  0001 L BNN
+F 3 "Manufacturer Recommendations" H 5800 2000 50  0001 L BNN
+F 4 "Cliff" H 5800 2000 50  0001 L BNN "Feld4"
+F 5 "6.00 mm" H 5800 2000 50  0001 L BNN "Feld5"
+F 6 "5" H 5800 2000 50  0001 L BNN "Feld6"
+	1    5800 2000
+	-1   0    0    1   
+$EndComp
+$Comp
+L FC68131:FC68131 J2
+U 1 1 5EBF72F1
+P 2500 3550
+F 0 "J2" H 2544 3731 50  0000 C CNN
+F 1 "PC Speaker" H 2544 3640 50  0000 C CNN
+F 2 "CLIFF_FC68131" H 2500 3550 50  0001 L BNN
+F 3 "Manufacturer Recommendations" H 2500 3550 50  0001 L BNN
+F 4 "Cliff" H 2500 3550 50  0001 L BNN "Feld4"
+F 5 "6.00 mm" H 2500 3550 50  0001 L BNN "Feld5"
+F 6 "5" H 2500 3550 50  0001 L BNN "Feld6"
+	1    2500 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 1500 3350 1500
+Wire Wire Line
+	3350 1500 5050 1500
+Wire Wire Line
+	5050 1500 5050 1600
+Wire Wire Line
+	5050 1600 5500 1600
+Connection ~ 3350 1500
+Wire Wire Line
+	5500 1400 4500 1400
+Wire Wire Line
+	4500 1400 4500 1600
+Wire Wire Line
+	2900 1700 3200 1700
+Wire Wire Line
+	3800 3750 2800 3750
+$Comp
+L power:GND #PWR02
+U 1 1 5EBFE8AD
+P 3000 3600
+F 0 "#PWR02" H 3000 3350 50  0001 C CNN
+F 1 "GND" H 3005 3427 50  0000 C CNN
+F 2 "" H 3000 3600 50  0001 C CNN
+F 3 "" H 3000 3600 50  0001 C CNN
+	1    3000 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 3600 3000 3550
+Wire Wire Line
+	3000 3550 2800 3550
+Wire Wire Line
+	5500 1900 4800 1900
+Wire Wire Line
+	4800 1900 4800 3950
+Wire Wire Line
+	3450 2550 3450 2000
+Wire Wire Line
+	3450 2000 5500 2000
+Connection ~ 3450 2550
+$EndSCHEMATC
